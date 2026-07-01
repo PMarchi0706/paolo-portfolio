@@ -39,7 +39,7 @@ export function NowPlayingWidget() {
   const label = data.isPlaying ? "Now playing" : "Last played";
 
   const content = (
-    <div className="flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-sm">
+    <div className="flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-black px-3 py-1.5 text-sm text-brand-black-foreground">
       {track.albumArt ? (
         <Image
           src={track.albumArt}
@@ -52,15 +52,15 @@ export function NowPlayingWidget() {
       ) : (
         <span
           className={`h-2 w-2 rounded-full ${
-            data.isPlaying ? "bg-green-500 animate-pulse" : "bg-muted-foreground"
+            data.isPlaying ? "bg-brand-orange animate-pulse" : "bg-brand-black-foreground/40"
           }`}
         />
       )}
-      <span className="text-muted-foreground">{label}:</span>
+      <span className="text-brand-black-foreground/60">{label}:</span>
       <span className="max-w-[10rem] truncate font-medium">
         {track.track}
       </span>
-      <span className="max-w-[8rem] truncate text-muted-foreground">
+      <span className="max-w-[8rem] truncate text-brand-black-foreground/60">
         — {track.artist}
       </span>
     </div>

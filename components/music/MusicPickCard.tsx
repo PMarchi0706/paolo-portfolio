@@ -1,10 +1,3 @@
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
 import type { MusicPick } from "@/lib/types";
 
 export function MusicPickCard({
@@ -15,21 +8,19 @@ export function MusicPickCard({
   blurb: string | undefined;
 }) {
   const content = (
-    <Card>
-      <CardHeader>
-        <CardTitle>{pick.title}</CardTitle>
-        <CardDescription>
-          {pick.artist}
-          {pick.album ? ` — ${pick.album}` : ""}
-          {pick.year ? ` (${pick.year})` : ""}
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p className="leading-relaxed text-muted-foreground">
-          {blurb ?? "Blurb not generated yet — run `npm run generate:blurbs`."}
-        </p>
-      </CardContent>
-    </Card>
+    <div className="rounded-2xl bg-brand-green p-6 text-brand-green-foreground">
+      <h3 className="font-heading text-xl font-bold tracking-tight">
+        {pick.title}
+      </h3>
+      <p className="mt-1 text-sm text-brand-green-foreground/60">
+        {pick.artist}
+        {pick.album ? ` — ${pick.album}` : ""}
+        {pick.year ? ` (${pick.year})` : ""}
+      </p>
+      <p className="mt-4 leading-relaxed text-brand-green-foreground/85">
+        {blurb ?? "Blurb not generated yet — run `npm run generate:blurbs`."}
+      </p>
+    </div>
   );
 
   if (pick.spotifyUrl) {

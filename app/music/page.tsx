@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Sparkle } from "lucide-react";
 import { MusicGrid } from "@/components/music/MusicGrid";
 
 export const metadata: Metadata = {
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
 export default function MusicPage() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">Music</h1>
+      <h1 className="flex items-center gap-2 font-heading text-4xl font-bold tracking-tight">
+        <Sparkle className="size-6 fill-brand-orange text-brand-orange" />
+        Music
+      </h1>
       <p className="mt-3 text-muted-foreground">
         A handful of songs I keep coming back to. The blurbs below are
         written by Claude, seeded with a short note from me on why each one
