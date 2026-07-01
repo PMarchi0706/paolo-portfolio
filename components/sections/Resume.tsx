@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
 
-// TODO: replace with Paolo's real contact links.
 const CONTACT_LINKS = [
-  { label: "Email", href: "mailto:your.email@example.com" },
-  { label: "GitHub", href: "https://github.com/your-username" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/your-username" },
+  { label: "Email", href: "mailto:paolomarchi070600@gmail.com" },
+  { label: "GitHub", href: "https://github.com/PMarchi0706" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/paolo-m-97b310138" },
 ];
 
 export function Resume() {
