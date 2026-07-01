@@ -15,6 +15,7 @@ export const projects: Project[] = [
     description:
       "A personal developer portfolio built with Next.js, featuring a live Spotify 'now playing' widget and an AI-generated music page: short, personality-driven blurbs for a curated list of song picks, written by Claude and cached at build time to keep the site fast and cost-effective.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Spotify API", "Anthropic API"],
-    // TODO: add the live URL once deployed.
+    link: "https://paolo-portfolio-beta.vercel.app",
+    linkLabel: "View live site",
   },
 ];
